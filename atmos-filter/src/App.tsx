@@ -1,13 +1,19 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import { Home } from "lucide-react";
-import Example from "./components/Home";
+import MainContent from "./components/MainContent";
+
 
 export default function App() {
   return (
     <Router>
       <div className="flex h-screen">
         <Sidebar />
+
+        <div className="rounded w-full-flex-justify-between flex-wrap">
+          <Routes>
+            <Route path="/" element= {<MainContent/>} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
