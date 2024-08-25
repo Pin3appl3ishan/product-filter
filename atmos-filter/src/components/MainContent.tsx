@@ -170,7 +170,7 @@ const MainContent = () => {
                   page === currentPage ? "bg-black text-white" : ""
                 } `}
               >
-                f{page}
+                {page}
               </button>
             ))}
           </div>
